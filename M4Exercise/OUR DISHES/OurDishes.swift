@@ -40,7 +40,7 @@ struct OurDishes: View {
                                 
                             }
                         }
-                        .searchable(text: $searchText, prompt: "asdasdas" )// add the search bar modifier here
+                        .searchable(text: $searchText, prompt: "search" )// add the search bar modifier here
                     }
             }
             
