@@ -14,12 +14,17 @@ struct DisplayDish: View {
     
     var body: some View {
         HStack{
-            Text(dish.name!).font(.system(size: 16, weight: .bold)).padding()
-            Spacer()
-            Text(String(format: "%5.2f",dish.price)).monospaced()
-                .foregroundColor(.gray)
+                Text(dish.name ?? "")
+                    .padding([.top, .bottom], 7)
 
-        }
+                Spacer()
+
+                Text(dish.formatPrice())
+                    .monospaced()
+                    .foregroundColor(.gray)
+                    .font(.callout)
+            }
+            .contentShape(Rectangle())
         // keep this code
     }
 }
